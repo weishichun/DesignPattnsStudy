@@ -9,10 +9,11 @@ public:
     void AddAPart(const string strPart){
        vecParts.push_back(strPart); 
     }
-    virtual void Show() const{
+    virtual void Show() {
         for(int i = 0; i<vecParts.size(); i++){
             cout << vecParts[i] <<  ", ";
         }
+        vecParts.clear();
         cout << endl;
     }
 };
