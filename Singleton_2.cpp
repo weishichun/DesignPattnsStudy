@@ -14,7 +14,6 @@ public:
     ~Singleton(){
         cout << "单例对象销毁" << endl;
     }
-    Singleton(const Singleton&){}
     static Singleton& GetInstance(){
         /*饿汉式的特点是一开始就加载了，如果说懒汉式是“时间换空间”，
         那么饿汉式就是“空间换时间”，因为一开始就创建了实例，
@@ -26,6 +25,7 @@ private:
     Singleton(){
         cout << "单例对象创建" << endl;
     }
+    Singleton(const Singleton&){}
 };
 int main(){
     Singleton& instance1 = Singleton::GetInstance();
