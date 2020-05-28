@@ -81,8 +81,8 @@ public:
 };
 int main(){
     Product objProduct;
-    FatPersonBuilder *pFat = new FatPersonBuilder(&objProduct);
-    ThinPersonBuilder *pThin = new ThinPersonBuilder(&objProduct);
+    Builder *pFat = new FatPersonBuilder(&objProduct);
+    Builder *pThin = new ThinPersonBuilder(&objProduct);
     Director objDirector;
     objDirector.CreatPerson(pFat);
     pFat->GetProduct()->Show();
