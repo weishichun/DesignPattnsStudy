@@ -78,6 +78,3 @@ int main(){
     V.Show();
     return 0;
 }
-
-
-
